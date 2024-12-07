@@ -1,0 +1,348 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Flask Project{% endblock %}
+
+{% block content %}
+<div class="row g-5">
+    <div class="col-md-8">
+      <h3 class="pb-4 mb-4 fst-italic border-bottom">
+        LlAMA LLM Model Assistant...
+      </h3>
+
+      <article class="blog-post">
+        <h2 class="display-5 link-body-emphasis mb-1">INHA LLM with LlAMA</h2>
+        <p class="blog-post-meta">November 30, 2024 by <a href="https://www.instagram.com/_tillme">Timur</a></p>
+
+       <p>Imagine asking a machine to summarize a book, solve a math problem, or even write a poem—and getting an answer so precise and natural, it feels like talking to a human. This is the power of Large Language Models (LLMs), the groundbreaking technology revolutionizing how we interact with AI. Whether you're curious about their inner workings, practical applications, or the ethical questions they raise, this website is your guide to the fascinating world of modern LLMs.</p>
+        <hr>
+        <p>In today’s digital age, LLMs are transforming industries by making technology more accessible and human-centric. They’re the driving force behind smarter chatbots, advanced research tools, and creative innovations. In this blog page we compare different models and their efficiency. And show the use case of our own model using some of their APIs mostly LLAMA   </p>
+        <h2>How does LLMs work?</h2>
+        <p>LLMs are trained on vast datasets of text from books, articles, websites, and more. The training process involves:
+
+          Tokenizing the Text: Breaking down text into smaller units called tokens (e.g., words, subwords, or characters).
+          Learning Patterns: The model learns patterns, relationships, and structures in the text to understand grammar, context, and meaning.</p>
+        <blockquote class="blockquote">
+          <p>Pre-training and Fine-tuning</p>
+        </blockquote>
+        <p>Pre-training: The model is initially trained on a broad range of data to understand language generally. It predicts the next token in a sequence, learning grammar, facts, and language structure.
+          Fine-tuning: The model is adjusted on specific tasks or datasets to specialize, such as answering questions, summarizing, or translating. For <a href="https://www.youtube.com/watch?v=wjZofJX0v4M">more.</a>
+          </p>
+        <h3>Why Llama, and what is it?</h3>
+        <p>The term "LLaMA" refers to Large Language Model Meta AI, a series of state-of-the-art LLMs developed by Meta (formerly Facebook). These models are designed to advance AI research and provide a robust alternative to popular LLMs like OpenAI's GPT. The name "LLaMA" likely plays on the idea of strength and utility, akin to the animal llama.</p>
+        <p> Why Llama:
+        </p>
+        <ul>
+          <li>Efficient and Scalable
+            LLaMA models are designed to be more efficient and accessible for research and applications. Unlike many commercial LLMs, LLaMA aims to:
+            Reduce the computational resources required for training and inference.
+            Maintain high performance even with smaller model sizes.</li>
+          <li>Open-Source Nature
+            Meta released LLaMA primarily for research purposes, providing greater access to:
+            
+            Researchers and developers who want to study and improve LLMs.
+            Organizations that cannot afford to use proprietary LLMs due to licensing or cost restrictions.
+            This open-source approach fosters collaboration and innovation in the AI community.</li>
+          <li>Performance vs. Size
+            LLaMA delivers competitive performance compared to larger models like GPT-3 or GPT-4, despite being smaller in size. This is achieved through:
+            
+            Optimized architecture.
+            Careful training on high-quality datasets.
+            Smaller model sizes make LLaMA more practical for real-world use without sacrificing too much accuracy.
+            
+            </li>
+        </ul>
+        <dt>Use Cases for LLaMA:</dt>
+        <ol>
+          <li>Chatbots and Virtual Assistants: Building conversational AI tools.</li>
+          <li>Research Applications: Experimenting with and improving upon LLM technology</li>
+          <li>Domain-Specific Models: Customizing LLaMA for specific industries like healthcare, legal, or finance.</li>
+        </ol>
+        <dt>And these are objectives why current model was developed for, and used following: </dt>
+        <ol>
+          <li> API: <a href="https://console.groq.com/"> GROQ </a> is cloud platform where Llama model is being computed.</li>
+          <li> GTTS voice convertor into English </li>
+          <li>Flask Application framework meanly manges all models behind all.</li>
+          <li>Eleven Labs API gives opportunity to chose voice assistant.</li>
+        </ol>
+        <h2>Code structure.</h2>
+        <p>Please refer to: <a href="https://github.com/tim-fihost/inharesearch">github</a> in order to get all source code.</p>
+        <ul>
+          <li><strong>Initial step, create venv by using</strong> <code class="language-plaintext highlighter-rouge"> python -m venv chatbot </code> </li>
+          <li><strong>Then next step is activate venv by using</strong> <code class="language-plaintext highlighter-rouge"> chatbot\Scripts\activate</code> </li>
+          <li><strong>Third, install requirements by using</strong>, <code class="language-plaintext highlighter-rouge">pip install requirements.txt -r </code></li>
+          <li><strong>Then, run flask application by using</strong>, <code class="language-plaintext highlighter-rouge">python main.py</code>.</li>
+          <li><strong>Finally, terminal should return</strong>, <code class="language-plaintext highlighter-rouge"> Running on http://127.0.0.1:5000 </code></li>
+        </ul>
+        <p>Don't forget share your updates for program on <a href="https://github.com/tim-fihost/inharesearch">github</a> page :) </p>
+        <h2>Heading</h2>
+        <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+        <h3>Sub-heading</h3>
+        <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+        <pre><code>Example code block</code></pre>
+        <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+      </article>
+
+      <article class="blog-post">
+        <h2 class="display-5 link-body-emphasis mb-1">Blog about LLaMA</h2>
+        <p class="blog-post-meta">February 2023<a href="https://www.meta.com/kr/en/"> Meta </a> has lunched its LLama LLM.</p>
+
+        <p>
+          LLaMA (Large Language Model Meta AI), introduced by Meta in February 2023, is a family of foundational large language models. It was designed to advance natural language understanding and generation while prioritizing efficiency and accessibility. Here's a detailed breakdown of LLaMA and its significance:
+        </p>
+        <ul>
+            <li>
+              Efficiency and Performance:
+
+              LLaMA was built to provide state-of-the-art performance while being more computationally efficient than some of its counterparts (e.g., OpenAI's GPT-3).
+              Smaller models in the LLaMA family deliver comparable results to larger models by focusing on optimized architectures and training methods.
+            </li>
+            <li>
+              Model Sizes:
+
+              LLaMA comes in multiple parameter sizes, including 7B, 13B, 33B, and 65B parameters. These models were designed to cater to various research and industrial applications, balancing performance and computational requirements.
+            </li>
+            <li>
+              Training Data:
+            
+              The model was trained on publicly available datasets, ensuring transparency in its development and avoiding proprietary data sources. The training data included content from multiple domains to enhance its generalization ability.
+            </li>
+            <li>
+            Accessibility for Researchers:
+            
+            LLaMA was released as an open-access model (to approved researchers) to promote transparency and ethical use of large language models, unlike many proprietary models.
+            
+            </li>
+            <li>
+              Performance:
+            
+              LLaMA outperformed larger models like GPT-3 (175B parameters) on benchmarks such as BoolQ, PIQA, and HellaSwag.
+              Its smaller versions (e.g., LLaMA 13B) often matched or exceeded the performance of much larger models.  
+            </li>
+        </ul>
+       <h3> Comparison  table</h3>
+        <p>Zero-shot performance on Common Sense Reasoning tasks.</p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th> Models </th>
+              <th> Dataset </th>
+              <th> BoolQ </th>
+              <th> PIQA </th>
+              <th> SIQA </th>
+              <th> HellaSwag </th>
+              <th> WinoGrande </th>
+              <th> ARC-e </th>
+              <th> ARC-c </th>
+              <th> OBQA </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GPT-3</td>
+              <td>175B</td>
+              <td>60.5</td>
+              <td>81.0</td>
+              <td> - </td>
+              <td>78.9</td>
+              <td>70.2</td>
+              <td>68.8</td>
+              <td>51.4</td>
+              <td>57.6</td>
+            </tr>
+            <tr>
+              <td>Gopher</td>
+              <td>280B</td>
+              <td>79.3</td>
+              <td>81.8</td>
+              <td>50.6</td>
+              <td>79.2</td>
+              <td>70.1</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Chinchilla</td>
+              <td>70B</td>
+              <td>83.7</td>
+              <td>81.8</td>
+              <td>51.3</td>
+              <td>80.8</td>
+              <td>74.9</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>PaLM</td>
+              <td>62B</td>
+              <td>84.8</td>
+              <td>80.5</td>
+              <td>-</td>
+              <td>79.7</td>
+              <td>77.0</td>
+              <td>75.2</td>
+              <td>52.5</td>
+              <td>50.4</td>
+            </tr>
+            <tr>
+              <td> PaLM-cont </td>
+              <td>62B</td>
+              <td>83.9</td>
+              <td>81.4</td>
+              <td>-</td>
+              <td>80.6</td>
+              <td>77.0</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>PaLM</td>
+              <td>540B</td>
+              <td>88.0</td>
+              <td>82.3</td>
+              <td>-</td>
+              <td>83.4</td>
+              <td>81.1</td>
+              <td>76.6</td>
+              <td>53.0</td>
+              <td>53.4</td>
+            </tr>
+          </tbody>
+          <tfoot class="last-row">
+            <!--This place where we add info abt Llama model!-->
+            <tr>
+              <td>LLaMA</td>
+              <td>7B</td>
+              <td>76.5</td>
+              <td>79.8</td>
+              <td>48.9</td>
+              <td>76.1</td>
+              <td>70.1</td>
+              <td>72.8</td>
+              <td>47.6</td>
+              <td>57.2</td>
+          </tr>
+          <tr>
+            <td>LLaMA</td>
+            <td>13B</td>
+            <td>78.1</td>
+            <td>80.1</td>
+            <td>50.4</td>
+            <td>79.2</td>
+            <td>73.0</td>
+            <td>74.8</td>
+            <td>52.7</td>
+            <td>56.4</td>
+          </tr>
+          <tr>
+            <td>LLaMA</td>
+            <td>33B</td>
+            <td>83.1</td>
+            <td>82.3</td>
+            <td>50.4</td>
+            <td>82.8</td>
+            <td>76.0</td>
+            <td>80.0</td>
+            <td>57.8</td>
+            <td>58.6</td>
+          </tr>
+          <tr>
+            <td>LLaMA</td>
+            <td>65B</td>
+            <td>85.3</td>
+            <td>82.8</td>
+            <td>52.3</td>
+            <td>84.2</td>
+            <td>77.0</td>
+            <td>78.9</td>
+            <td>56.0</td>
+            <td>60.2</td>
+          </tr>
+          </tfoot>
+        </table>
+        <p>Datasets was used for training: CommonCrawl, C4, Github, Wikipedia, Books, ArXiv, StackExchange</p>
+      </article>
+
+      <article class="blog-post">
+        <h2 class="display-5 link-body-emphasis mb-1">Eleven Labs</h2>
+        <p class="blog-post-meta"> Multi voice features <a href="https://elevenlabs.io/">Eleven labs</a></p>
+
+        <p>Eleven Labs is a prominent AI company specializing in text-to-speech (TTS) technology. Their focus is on creating highly realistic and expressive synthetic voices. The company uses advanced deep learning techniques to generate speech that closely mimics human intonation, pitch, and emotion.</p>
+        <ul>
+          <li>Voice Cloning: Their platform allows users to clone voices with minimal data input, making it suitable for personal or professional use.</li>
+          <li>Multi-language Support: They provide TTS capabilities in multiple languages, aiming to cover diverse linguistic needs.</li>
+          <li>Custom Voices: Users can design custom AI voices tailored to specific branding or character needs.</li>
+          <li>Applications: Eleven Labs technology is widely used in entertainment, audiobooks, gaming, and content creation. Their TTS solutions can bring characters to life or make content more accessible to visually impaired audiences.</li>
+        </ul>
+        <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+      </article>
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-body-tertiary rounded">
+          <h4 class="fst-italic">About</h4>
+          <p class="mb-0">Please refer pages bellow in order to see demo video.</p>
+        </div>
+
+        <div>
+          <h4 class="fst-italic">Concents</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <img 
+                  src="static/images/any-questions-1.jpg" 
+                  alt="Question image" 
+                  width="100%" 
+                  height="96" 
+                  style="object-fit: cover;">
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Testing model with various questions</h6>
+                  <small class="text-body-secondary">2024/November/1</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <img 
+                  src="static/images/voice.jpg" 
+                  alt="Question image" 
+                  width="100%" 
+                  height="96" 
+                  style="object-fit: cover;">
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Voice Model</h6>
+                  <small class="text-body-secondary">2024/November/1</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <img 
+                  src="static/images/elevenlabs.jpg" 
+                  alt="Question image" 
+                  width="100%" 
+                  height="96" 
+                  style="object-fit: cover;">
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Eleven Labs</h6>
+                  <small class="text-body-secondary">2024/November/1</small>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="p-4">
+          <h4 class="fst-italic">contacts</h4>
+          <ol class="list-unstyled">
+            <li><a href="https://github.com/tim-fihost/inharesearch">GitHub</a></li>
+            <li><a href="https://www.instagram.com/_tillme">instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/timur-abdurakhman-24311725b/">linkedin</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

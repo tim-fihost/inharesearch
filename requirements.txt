@@ -1,0 +1,4 @@
+flask
+elevenlabs
+gtts
+groq
