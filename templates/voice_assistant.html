@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}Voice Assistant{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Page Header -->
+    <header class="mb-4 text-center">
+        <h1>Voice Assistant</h1>
+        <p class="text-muted">Record your voice and chat with the assistant.</p>
+    </header>
+    <!-- Chat Section -->
+    <div class="chat-box" id="chat-box" style="height: 400px; overflow-y: scroll; border: 1px solid #ddd; padding: 10px;">
+        <!-- Dynamic messages will be appended here -->
+    </div>
+
+    <!-- Audio Input Section -->
+    <section class="mt-4">
+        <button id="startBtn" class="btn btn-primary btn-lg">Start Recording</button>
+        <button id="stopBtn" class="btn btn-danger btn-lg" style="display:none;">Stop Recording</button>
+        <p id="status" class="mt-3"></p>
+    </section>
+    <!-- Audio Player -->
+    <section class="mt-4">
+        <audio id="audioPlayer" controls style="display: none;"></audio>
+    </section>
+</div>
+
+<!-- JavaScript for Audio Recording -->
+<script>
+    let mediaRecorder;
+    let audioChunks = [];
+
+    function appendMessage(content, type) {
+        const chatBox = document.getElementById('chat-box');
+        const message = document.createElement('div');
+        message.classList.add('chat-message', type === 'user' ? 'user-message' : 'assistant-message');
+        message.style.margin = '10px 0';
+        message.style.textAlign = type === 'user' ? 'right' : 'left';
+        message.innerHTML = `<p>${content}</p>`;
+        chatBox.appendChild(message);
+        chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the latest message
+    }
+
+    // Start recording
+    function startRecording() {
+        navigator.mediaDevices.getUserMedia({ audio: true })
+            .then(stream => {
+                mediaRecorder = new MediaRecorder(stream);
+                mediaRecorder.ondataavailable = event => {
+                    audioChunks.push(event.data);
+                };
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                    audioChunks = []; // Clear chunks for next recording
+                    
+                    // Append user's message placeholder
+                    appendMessage("Recording sent for processing...", "user");
+
+                    // Send the recorded audio to Flask backend
+                    const formData = new FormData();
+                    formData.append('audio', audioBlob, 'audio.wav');
+
+                    fetch('/voice-assistant', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.audio_url) {
+                            // Append assistant's response to chat
+                            appendMessage(data.response_text, "assistant");
+
+                            // Replace old audio recording with the new one (cache-busting)
+                            const audioPlayer = document.getElementById('audioPlayer');
+                            const uniqueAudioUrl = `${data.audio_url}?t=${new Date().getTime()}`; // Append a timestamp
+                            audioPlayer.src = uniqueAudioUrl; // Set the new audio file URL
+                            audioPlayer.style.display = 'block'; // Make the audio player visible
+                            audioPlayer.load(); // Load the new audio source
+                            audioPlayer.play(); // Play the new audio
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+                };
+
+                mediaRecorder.start();
+                document.getElementById('status').innerText = 'Recording...';
+                document.getElementById('stopBtn').style.display = 'inline-block';
+                document.getElementById('startBtn').style.display = 'none';
+            })
+            .catch(error => console.error('Error accessing media devices.', error));
+    }
+
+    // Stop recording
+    function stopRecording() {
+        mediaRecorder.stop();
+        document.getElementById('status').innerText = 'Processing audio...';
+        document.getElementById('stopBtn').style.display = 'none';
+        document.getElementById('startBtn').style.display = 'inline-block';
+    }
+
+    // Event listeners for buttons
+    document.getElementById('startBtn').addEventListener('click', startRecording);
+    document.getElementById('stopBtn').addEventListener('click', stopRecording);
+</script>
+
+{% endblock %}
