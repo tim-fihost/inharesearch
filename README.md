@@ -4,24 +4,6 @@ Demo video: https://youtu.be/MSZoL57Hd6c
 
 This repository contains various resources, codes, and tools for research activities, primarily focused on computational and AI-related projects. Below, you'll find detailed instructions and descriptions to help you navigate and utilize the repository effectively.
 
-Table of Contents
-  
-  Overview
-  
-  Installation
-  
-  Repository Structure
-  
-  Usage Guide
-  
-  Contributing
-  
-  License
-  
-  Contact
-  
-  Overview
-
 This repository is designed to provide:
 
 Research codes and scripts.
