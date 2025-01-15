@@ -1,4 +1,4 @@
-# 🚀 Inha Research Repository Documentation
+# 🚀 Inha Research Repository Project Documentation for llama
 
 Welcome to the **Inha Research Repository**! This repository contains various resources, codes, and tools for research activities, primarily focused on computational and AI-related projects. Below, you'll find detailed instructions and descriptions to help you navigate and utilize the repository effectively.
 
@@ -63,11 +63,6 @@ inharesearch/
 └── tests/            # Unit and integration tests
 ```
 
-Each project folder contains:
-- **📝 README.md**: Project-specific documentation.
-- **📜 scripts/**: Executable scripts.
-- **📊 notebooks/**: Jupyter notebooks for analysis.
-- **📁 results/**: Output files and analysis results.
 
 ---
 
@@ -117,7 +112,7 @@ This repository is licensed under the [MIT License](LICENSE). Please ensure comp
 
 For any queries or issues, feel free to contact the maintainer:
 - **Name**: Timur
-- **Email**: [timur1901sh@gmail.com](mailto:timur1901sh@gmail.com)
+- **Email**: [timuleooo0212@gmail.com](mailto:timuleooo@gmail.com)
 
 We hope you find this repository useful for your research endeavors. Happy coding! 🎉
 
