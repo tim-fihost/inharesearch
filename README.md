@@ -1,20 +1,36 @@
-# inharesearch
-cv2 research page.
-Demo video: https://youtu.be/MSZoL57Hd6c
+🚀 Inha Research Repository Documentation
 
-This repository contains various resources, codes, and tools for research activities, primarily focused on computational and AI-related projects. Below, you'll find detailed instructions and descriptions to help you navigate and utilize the repository effectively.
+Welcome to the Inha Research Repository! This repository contains various resources, codes, and tools for research activities, primarily focused on computational and AI-related projects. Below, you'll find detailed instructions and descriptions to help you navigate and utilize the repository effectively.
+
+🌟 Table of Contents
+
+Overview
+
+Installation
+
+Repository Structure
+
+Usage Guide
+
+Contributing
+
+License
+
+Contact
+
+📖 Overview
 
 This repository is designed to provide:
 
-Research codes and scripts.
+📜 Research codes and scripts.
 
-Datasets and configuration files.
+🗂️ Datasets and configuration files.
 
-Documentation and resources for specific projects.
+📚 Documentation and resources for specific projects.
 
 The repository is structured to ensure ease of use, modularity, and extensibility.
 
-Installation
+🛠️ Installation
 
 To set up the repository on your local machine:
 
@@ -32,7 +48,7 @@ pip install -r requirements.txt
 
 Ensure you have Python 3.8 or higher installed on your system. Additional dependencies or tools might be required based on the project you’re working on. Refer to individual project folders for more information.
 
-Repository Structure
+📂 Repository Structure
 
 The repository is organized as follows:
 
@@ -49,15 +65,15 @@ inharesearch/
 
 Each project folder contains:
 
-README.md: Project-specific documentation.
+📝 README.md: Project-specific documentation.
 
-scripts/: Executable scripts.
+📜 scripts/: Executable scripts.
 
-notebooks/: Jupyter notebooks for analysis.
+📊 notebooks/: Jupyter notebooks for analysis.
 
-results/: Output files and analysis results.
+📁 results/: Output files and analysis results.
 
-Usage Guide
+🚀 Usage Guide
 
 Explore the src/ directory to find specific project folders.
 
@@ -69,7 +85,7 @@ python src/project1/main.py
 
 Use configuration files from the configs/ directory to customize your runs.
 
-Contributing
+🤝 Contributing
 
 We welcome contributions to improve the repository! To contribute:
 
@@ -89,11 +105,11 @@ git push origin feature-name
 
 Ensure your code follows the existing style and includes necessary tests and documentation.
 
-License
+📜 License
 
 This repository is licensed under the MIT License. Please ensure compliance with the license terms when using or contributing to this repository.
 
-Contact
+📬 Contact
 
 For any queries or issues, feel free to contact the maintainer:
 
@@ -101,8 +117,4 @@ Name: Timur
 
 Email: timur1901sh@gmail.com
 
-We hope you find this repository useful for your research endeavors. Happy coding!
-
-
-
-
+We hope you find this repository useful for your research endeavors. Happy coding! 🎉
