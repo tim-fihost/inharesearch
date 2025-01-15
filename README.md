@@ -100,13 +100,6 @@ git push origin feature-name
 
 Ensure your code follows the existing style and includes necessary tests and documentation.
 
----
-
-## 📜 License
-
-This repository is licensed under the [MIT License](LICENSE). Please ensure compliance with the license terms when using or contributing to this repository.
-
----
 
 ## 📬 Contact
 
