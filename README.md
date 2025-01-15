@@ -1,6 +1,7 @@
 # inharesearch
 cv2 research page.
 Demo video: https://youtu.be/MSZoL57Hd6c
+
 This repository contains various resources, codes, and tools for research activities, primarily focused on computational and AI-related projects. Below, you'll find detailed instructions and descriptions to help you navigate and utilize the repository effectively.
 
 Table of Contents
@@ -116,13 +117,9 @@ For any queries or issues, feel free to contact the maintainer:
 
 Name: Timur
 
-Email: timuleooo0212@gmail.com
+Email: timur1901sh@gmail.com
 
 We hope you find this repository useful for your research endeavors. Happy coding!
-
-
-
-
 
 
 
